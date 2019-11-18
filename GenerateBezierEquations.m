@@ -25,6 +25,8 @@ function [Bezx,Bezy,Bezz,D]=GenerateBezierEquations(n)
 %    REQUIREMENTS: Symbolical toolbox to generate equations. Note that the 
 %    equations can be easily copied to functions later on that obviously do
 %    not require the symbolical toolbox. 
+% 
+%    AUTHOR: Keith Jared Roberts, USP, 2019. 
 %%
 m=n ; % 
 
