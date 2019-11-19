@@ -1,0 +1,13 @@
+function [OUT] = qbSurf(points,u,v)
+% bi-quadratic bezier surface defind by 3x3 cell-array points 
+
+OUT=points{1,1}.*(u - 1).^2.*(v - 1).^2 + points{3,3}.*u.^2.*v.^2 + ...
+    points{1,3}.*v.^2.*(u - 1).^2 + points{3,1}.*u.^2.*(v - 1).^2 - ...
+    points{2,3}.*u.*v.^2.*(2.*u - 2) - 2.*points{1,2}.*v.*(u - 1).^2.*(v - 1) - ...
+    points{2,1}.*u.*(2.*u - 2).*(v - 1).^2 - 2.*points{3,2}.*u.^2.*v.*(v - 1) + ...
+    2.*points{2,2}.*u.*v.*(2.*u - 2).*(v - 1); 
+
+
+
+end
+
